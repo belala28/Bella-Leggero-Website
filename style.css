@@ -53,9 +53,9 @@ main {
 .individual-image {
     width: 300px;
     height: auto;
-    border: 20px solid black; /* Set the border style (2px width, solid black color) */
-    border-radius: 5px; /* Add rounded corners to the frame */
-    padding: none; /* Add padding inside the frame */
+    border: 20px;
+    border-radius: 5px; /* rounded corners */
+    padding: 5px; 
   }
 
 footer {
@@ -65,4 +65,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.hidden-section {
+    display: none;
 }
