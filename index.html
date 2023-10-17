@@ -5,67 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bella Leggero Designs</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/axt5jhm.css">
+    
+    <style>
+        body {
+            cursor: url('Image/testrainbowcopy.png'), auto;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Bella Leggero</h1>
+        <nav>
+            <a href="#" onclick="showTab('design')">Work</a>
+            <div class="dropdown">
+         <a href="#" onclick="showTab('art')">Services &#9662;</a>
+         <div class="dropdown-content">
+            <a href="#artClasses">Art Classes</a>
+            <a href="#design">Design</a>
+            </div>
+        </div>
+            
+            <a href="#" onclick="showTab('about')">About</a>
+            <a href="Files/resume.pdf">Resume</a>
+            <a href="#" onclick="showTab('contact')">Contact</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#" onclick="showTab('design')">Design</a>
-        <a href="#" onclick="showTab('art')">Art</a>
-        <a href="#" onclick="showTab('about')">About</a>
-        <a href="#" onclick="showTab('contact')">Contact</a>
-    </nav>
+    
     <main>
         <div id="designTab" class="tab-content">
-                    <h2>Hi I'm Bella!</h2>
-                    <p>
-                        Welcome to my website and let's pretend this is an introduction okay thanks and then I'll replace later okay period yes.
-                    </p>
-                    <a href="#" id="cactusImage" onclick="showProjectDetails('cactus')">
-                        <img src="images/cactus.jpg" alt="Cactus Project" class="individual-image">
-                    </a>
-                    
-                    <img src="images/Montreux.jpeg" alt="Montreux Jazz Festival Rebrand" class="individual-image">
+            <h2> Hi I'm Bella! (Website Under Construction) </h2>
+            <a href="#" onclick="openImagePopup('images/Montreux.jpeg')">
+                <img src="images/cactus.jpg" alt="Cactus Project" class="individual-image">
+            </a>    
+
+         <a href="#" onclick="openImagePopup('images/Montreux.jpeg')">
+                    <img src="images/Montreux.jpeg" alt="Montreux Project" class="individual-image">
+                </a>  
+                <a href="#" onclick="openImagePopup('images/BatInfographic.jpeg')">
                     <img src="images/BatInfographic.jpeg" alt="Bat Infographic" class="individual-image">
+                </a>  
+                <a href="#" onclick="openImagePopup('images/Squishmallow.jpeg')">
                     <img src="images/Squishmallow.jpeg" alt="Squishmallow Map" class="individual-image">
-                    <img src="images/GFME.jpeg" alt="Gluten Free Me App" class="individual-image">
+                </a> 
+                <a href="#" onclick="openImagePopup('images/GFMEGif.gif')">
+                    <img src="images/GFMEGif.gif" alt="Gluten Free Me App (GIF)" class="individual-image">
+                </a> 
+                <a href="#" onclick="openImagePopup('images/SFCV.jpeg')">
                     <img src="images/SFCV.jpeg" alt="SF City Vitals Logo" class="individual-image">
+                </a>
                     <div id="projectDetails" class="hidden-section">
                         <!-- Project details will be populated here -->
                     </div>        
         </div>
         <div id="artTab" class="tab-content" style="display: none;">
             <section class="Art">
-                <div class="classes">
-                    <img src="path_to_your_image.jpg" alt="Class 1">
-                    <h3>Class 1</h3>
-                    <p>Class description goes here.</p>
-                </div>
-                <div class="classes">
-                    <img src="path_to_your_image.jpg" alt="Class 2">
-                    <h3>Class 2</h3>
-                    <p>Class description goes here.</p>
-                </div>
-                <div class="classes">
-                    <img src="path_to_your_image.jpg" alt="Class 3">
-                    <h3>Class 3</h3>
-                    <p>Class description goes here.</p>
+                <h2>Ms. Bella's Art Classes!</h2>
+                <p>In progress paragraph. I've been an arts and crafts instructor for two years, teaching various fun classes: Art Adventures in Nature, Cartoon Crafts, Pop Art, Seasonal Crafts and Art Under the Sea and Super Sweet Crafts.I make it a priority to use as much recyclable materials as possible in my classes and when creating my art. I believe it is important to teach the younger generation how to take old materials and upcycle them into their own masterpieces! Providing the younger generation with a safe space where they can express their talents and ideas helps promote empowerment and supports them during this influential learning time in their lives. It is my passion to inspire others to become art teachers just as my old art teacher did for me!</p>
+                
             </section>
                 </div>
          <div id="aboutTab" class="tab-content" style="display: none;">
             <section class="About">
-                    <h2>About Me</h2>
+                    <h2>Hi I'm Bella!</h2>
                     <p>
-                        This paragraph will be the about me section.
+I’m a recent graduate of San Francisco State University with a major in Visual Communication Design and a minor in Marketing. I love to work in both print and digital mediums, where I can transform concepts into engaging visuals!  I am eager to contribute my creativity and skills in an entry-level position that allows me to collaborate and grow within a dynamic team.
                     </p> 
+                   <img src="images/graduate.jpg" alt="SFSU Graduate" class="individual-image">
+
             </section>
         </div>
+
+        <div id="resumeTab" class="tab-content" style="display: none;">
+            <section class="Resume">
+                    <h2>My Experience</h2>
+                    <p>My background includes freelance work for a local business and, a book design internship, and active participation as a mentee for Chronicle Books, where I am continuing to refine my skills. I am eager to contribute my creativity and skills in an entry-level position that allows me to collaborate and grow within a dynamic team.  </p> 
+            </section>
+        </div>
+
+        <div id="contactTab" class="tab-content" style="display: none;">
+            <section class="Contact">
+                    <h2>Looking forward to hearing from you!</h2>
+                    <p>Let's connect or collaborate!</p>
+                    
+                    <h3>Design/General Inquiries</h3>
+                    <p><a href="mailto:leggerodesigns@gmail.com">leggerodesigns@gmail.com</a></p>
+            
+                    <h3>Art Instruction Inquiries</h3>
+                    <p><a href="mailto:msbellasartclass@gmail.com">msbellasartclass@gmail.com</a></p>
+                    
+                    <h3>Socials</h3>
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/bellaleggero" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </section>
+            </div>
     </main>
 
+    <div id="imagePopup" class="popup">
+        <div class="popup-content">
+            <img id="popupImage" src="" alt="Popup Image">
+            <span class="close-popup" onclick="closeImagePopup()">&times;</span>
+        </div>
+    </div>
+
     <footer>
-        <p>artwbella@gmail.com</p>
+       
+        <ul>
+        
+            <li>
+                <a href="mailto:leggerodesigns@gmail.com">leggerodesigns@gmail.com</a>
+                <a href="https://www.linkedin.com/in/bellaleggero" title="This link will take you to Bella's Linkedin">Linkedin</a>
+            </li>
+        </ul>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -7,29 +7,73 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     text-align: center;
+    padding: 50px 0; /* Adjust the padding as needed */
 }
 
+/* Align "Bella Leggero" with the navigation bar */
 header {
-    background-color: #f5f5f5;
-    text-align: left;
-    padding: 20px;
+    display: flex;
+    align-items: center; /* Vertically align items in the header */
+    justify-content: space-between; /* Add space between items */
+    text-align: left; /* Reset text alignment */
+    padding: 0 50px; /* Adjust the padding as needed */
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'mudstone-sans', sans-serif;
+    font-size: 25px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    margin-left: -115px; /* Adjust the margin-left as needed */
+    font-family: 'mudstone-sans', sans-serif; 
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'mudstone-sans', sans-serif;
+    font-size: 25px;
 }
 
 nav {
-    background-color: #f2f2f2;
-    color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
+    color: #0000ff; /* Blue color */
     text-align: right;
+    margin-right: -120px; /* Nav bar move */
+    font-family: 'mudstone-sans', sans-serif;
+    
 }
 
 nav a {
-    color: #fff;
+    color: #0000ff; /* Blue color */
     text-decoration: none;
     margin: 0 10px;
+    font-family: 'mudstone-sans', sans-serif;
+}
+
+/* Add space between the navigation bar and the "Hi, I'm Bella!" section */
+#designTab h2 {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+#artTab h2 {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+#aboutTab h2 {
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+#contactTab h2 {
+    margin-top: 20px; /* Adjust the margin as needed */
 }
 
 main {
-    padding: 20px;
+    main {
+       padding: 20px; /* Add padding as needed */
+    }
 }
 
 .gallery {
@@ -59,14 +103,242 @@ main {
   }
 
 footer {
-    background-color: #f5f5f5;
+    background-color: #35a0a1;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
+    font-family: 'mudstone-sans', sans-serif;
 }
 
 .hidden-section {
     display: none;
+}
+
+<style>
+    /* Container styling */
+    .tab-content {
+        display: none;
+        background-color: #f7f7f7;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    }
+
+    /* Heading styles */
+    .Contact h2 {
+        font-size: 24px;
+        color: #333;
+        text-align: center;
+    }
+
+    /* Text paragraph styles */
+    .Contact p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #666;
+        text-align: center;
+    }
+
+    /* Contact details styles */
+    .Contact h3 {
+        font-size: 18px;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    .Contact a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    /* Social media links styles */
+    .Contact ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .Contact ul li {
+        margin-top: 10px;
+    }
+
+    .Contact ul li a {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 3px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .Contact ul li a:hover {
+        background-color: #0056b3;
+    }
+
+    p {
+        text-align: left;
+    }
+
+
+
+
+</style>
+
+/* Default link styles */
+nav a {
+    text-decoration: none;
+    color: #333; /* Default text color */
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #fff; /* Default background color */
+    transition: color 0.3s; /* Smooth text color transition */
+}
+
+/* Hover styles */
+nav a:hover {
+    color: #ff00e1; /* Text color on hover */
+    background-color: transparent; /* Remove background color on hover */
+}
+
+/* Footer */
+footer {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Heading styles */
+footer p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Contact details styles */
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-top: 10px;
+}
+
+/* Change link color on hover */
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Link hover styles */
+footer ul li a:hover {
+    color: #007bff; /* Color on hover */
+}
+
+/* CSS for the image popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 999; /* Ensure the popup is above other content */
+    overflow: auto;  /* Enable scrolling within the popup */
+}
+
+.popup-content {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+.popup-content img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.close-popup {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 50px; /* Increase the font size to make it bigger */
+    cursor: pointer;
+}
+
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Styling the dropdown arrow */
+.dropdown a::after {
+    content: " ▾"; /* Unicode character for down arrow */
+    font-size: 12px;
+}
+
+/* Add this to your existing CSS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }

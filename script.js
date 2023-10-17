@@ -1,32 +1,18 @@
+// Function to show tab content
 function showTab(tab) {
-    const designTab = document.getElementById("designTab");
-    const artTab = document.getElementById("artTab");
-    const aboutTab = document.getElementById("aboutTab");
-    const contactTab = document.getElementById("contactTab");
+    const tabs = ["design", "art", "about", "contact"];
+    
+    tabs.forEach((t) => {
+        const tabContent = document.getElementById(`${t}Tab`);
+        if (t === tab) {
+            tabContent.style.display = "block";
+        } else {
+            tabContent.style.display = "none";
+        }
+    });
+}
 
-    if (tab === "design") {
-        designTab.style.display = "block";
-        artTab.style.display = "none";
-        aboutTab.style.display = "none";
-        contactTab.style.display = "none";
-    } else if (tab === "art") {
-        designTab.style.display = "none";
-        artTab.style.display = "block";
-        aboutTab.style.display = "none";
-        contactTab.style.display = "none";
-    } else if (tab === "about") {
-        designTab.style.display = "none";
-        artTab.style.display = "none";
-        aboutTab.style.display = "block";
-        contactTab.style.display = "none";
-    } else if (tab === "contact") {
-        designTab.style.display = "none";
-        artTab.style.display = "none";
-        aboutTab.style.display = "none";
-        contactTab.style.display = "block";
-    }
-
-  // Function to show project details
+// Function to show project details
 function showProjectDetails(projectName) {
     const projectDetails = getProjectDetails(projectName);
     const projectDetailsSection = document.getElementById('projectDetails');
@@ -39,8 +25,8 @@ function showProjectDetails(projectName) {
 function getProjectDetails(projectName) {
     if (projectName === 'cactus') {
         return `
-            <h2>TAZO Tea Box Redesign</h2>
-            <p>This project involved redesigning the packaging for TAZO Tea, incorporating vibrant colors and a modern look.</p>
+            <h2>Cactus Project</h2>
+            <p>Project description goes here.</p>
             <!-- You can add more details, images, etc. here -->
         `;
     }
@@ -50,15 +36,18 @@ function getProjectDetails(projectName) {
     return '';
 }
 
+// Function to open the image popup
+function openImagePopup(imageSrc) {
+    var popup = document.getElementById('imagePopup');
+    var popupImage = document.getElementById('popupImage');
+    popup.style.display = 'block';
+    popupImage.src = imageSrc;
+    document.body.style.overflow = 'hidden'; // Disable scrolling while popup is open
+}
 
-
-
-
-
-
-
-
-
-
-
+// Function to close the image popup
+function closeImagePopup() {
+    var popup = document.getElementById('imagePopup');
+    popup.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling again
 }
