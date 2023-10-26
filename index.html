@@ -17,9 +17,16 @@
     <header>
         <h1>Bella Leggero</h1>
         <nav>
+            <style>
+                .dropdown a {
+                    text-decoration: none;
+                    appearance: none;
+                }
+            </style>  
             <a href="#" onclick="showTab('design')">Work</a>
             <div class="dropdown">
-         <a href="#" onclick="showTab('art')">Services </a>
+                              
+         <a href="#" onclick="showTab('art')">Services <span>&#9662;</span></a>
          <div class="dropdown-content">
             <a href="#artClasses">Art Classes</a>
             <a href="#design">Design</a>

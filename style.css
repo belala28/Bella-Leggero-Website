@@ -307,11 +307,11 @@ footer ul li a:hover {
     display: block;
 }
 
-/* Styling the dropdown arrow */
+/*Styling the dropdown arrow
 .dropdown a::after {
-    content: " ▾"; /* Unicode character for down arrow */
+    content: " ▾";  Unicode character for down arrow 
     font-size: 12px;
-}
+} */
 
 /* Add this to your existing CSS */
 .dropdown {
