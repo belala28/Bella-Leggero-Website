@@ -71,6 +71,26 @@ nav a {
 #aboutTab h2 {
     margin-top: 20px; /* Adjust the margin as needed */
 }
+
+/* New styles for the updated structure */
+.about-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space content evenly */
+    align-items: center; /* Vertically center content */
+    text-align: left;
+        margin-left: 190px;
+}
+
+.about-info {
+    flex: 1; /* Take up remaining space in the flex container */
+}
+
+.about-photo {
+    flex: 1; /* Take up remaining space in the flex container */
+    text-align: right; /* Align text to the right */
+    margin-right: 190px;
+}
+
 #contactTab h2 {
     margin-top: 20px; /* Adjust the margin as needed */
 }
@@ -135,7 +155,9 @@ footer {
     /* Heading styles */
     .Contact h2 {
         font-size: 24px;
-        text-align: center;
+        text-align: left;
+        margin-left: 190px;
+        
     }
 
     /* Text paragraph styles */
@@ -143,6 +165,7 @@ footer {
         font-size: 16px;
         line-height: 1.5;
         text-align: left;
+        margin-left: 190px;
     }
 
     /* Contact details styles */
@@ -151,6 +174,7 @@ footer {
         margin-top: 20px;
         text-align: left;
         font-family: 'mudstone-sans', sans-serif;
+        margin-left: 190px;
     }
 
     .Contact a {
@@ -182,10 +206,26 @@ footer {
         background-color: #264143;
     }
 
-    p {
-        text-align: left;
+    .contact-content {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space content evenly */
+        align-items: center; /* Vertically center content */
+    }
+    
+    .contact-info {
+        flex: 1; /* Take up remaining space in the flex container */
+         /* Add spacing between content */
+        padding-right: 20px;
+        color: #264143;
+    }
+    
+    .contact-photo {
+        flex: 1; /* Take up remaining space in the flex container */
+        text-align: right; /* Align text to the right */
+        margin-right: 190px;
     }
 
+    
 </style>
 
 
@@ -209,7 +249,7 @@ nav a:hover {
 /* Footer */
 footer {
     background-color: #e99f4c;
-    color: #fff;
+    color: #264143;
     padding: 20px 0;
     text-align: center;
     position: static;
@@ -227,6 +267,7 @@ footer ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
+    color: #264143;
 }
 
 footer ul li {
@@ -255,6 +296,7 @@ footer ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
+    color: #264143;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
     z-index: 999; /* Ensure the popup is above other content */
     overflow: auto;  /* Enable scrolling within the popup */
@@ -265,12 +307,13 @@ footer ul li a:hover {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #fff;
+    background-color: #e99f4c;
     margin: 0 auto;
     padding: 20px;
     max-width: 90%;
     max-height: 90%;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    color: #264143;
 }
 
 .popup-content img {
@@ -292,6 +335,7 @@ footer ul li a:hover {
 .dropdown {
     position: relative;
     display: inline-block;
+    color:#264143;
 }
 
 .dropdown-content {
@@ -300,6 +344,7 @@ footer ul li a:hover {
     background-color: #eddcd9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    color:#264143;
 }
 
 .dropdown-content a {
@@ -311,6 +356,7 @@ footer ul li a:hover {
 
 .dropdown:hover .dropdown-content {
     display: block;
+    color:#264143;
 }
 
 /*Styling the dropdown arrow
@@ -319,26 +365,28 @@ footer ul li a:hover {
     font-size: 12px;
 } */
 
-/* Add this to your existing CSS */
 .dropdown {
     position: relative;
     display: inline-block;
+    color:#264143;
 }
 
+/*Where you change color of dropdown*/
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #eddcd9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    color:#264143;
 }
 
 .dropdown-content a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: #333;
+    color:#264143;
 }
 
 .dropdown-content a:hover {

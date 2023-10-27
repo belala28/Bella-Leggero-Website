@@ -20,10 +20,7 @@
         body {
 
             cursor: url('Images/testrainbowcopy.png'), auto;
-
         }
-
-
 
         /* Styles for the pop-up container */
 
@@ -100,7 +97,7 @@
             <a href="#" onclick="showTab('design')">Work</a>
             <div class="dropdown">
 
-                <a href="#" onclick="showTab('art')">Services <span>&#9662;</span></a>
+                <a href="#">Services <span>&#9662;</span></a>
                 <div class="dropdown-content">
                     <a href="#artClasses" onclick="showTab('art')">Art Classes</a>
                     <a href="#design" onclick="showTab('actualDesign')">Design</a>
@@ -123,23 +120,23 @@
             <h2> Hello I'm Bella! (Website Under Construction) </h2>
 
             <a href="#"
-                onclick="openImagePopup('Images/Montreux.jpeg', 'Montreux Project', 'Description for Montreux Project')">
+                onclick="openImagePopup('Images/cactus.jpg', 'Tazo Tea Box Redesign', 'Discover the vibrant fusion of nature and design with TAZOs reimagined tea boxes. Using real fruits as stamps, each box showcases a unique artwork, while a burst of bright colors ensures an irresistible shelf presence. Embark on a sensory journey, where tea becomes an artful experience that delights both the eyes and the palate!')">
 
-                <img src="Images/cactus.jpg" alt="Cactus Project" class="individual-image">
+                <img src="Images/cactus.jpg" alt="Tazo Tea Box" class="individual-image">
 
             </a>
 
 
 
             <a href="#"
-                onclick="openImagePopup('Images/Montreux.jpeg', 'Montreux Project', 'Description for Montreux Project')">
+                onclick="openImagePopup('Images/Montreux.jpeg', 'Montreux Jazz Festival Rebranding', 'Description for Montreux Jazz Festival Rebranding')">
 
-                <img src="Images/Montreux.jpeg" alt="Montreux Project" class="individual-image">
+                <img src="Images/Montreux.jpeg" alt="Montreux Jazz Festival Rebranding" class="individual-image">
 
             </a>
 
             <a href="#"
-                onclick="openImagePopup('Images/BatInfographic.jpeg', 'Bat Infographic', 'Description for Bat Infographic')">
+                onclick="openImagePopup('Images/BatInfographic.jpeg', 'Bat Poster Infographic', 'Who gave bats a bad rep? This infographic poster brings light to some fascinating facts on these misunderstood creatures. Don’t stay in the dark, learn more about our furry friends!')">
 
                 <img src="Images/BatInfographic.jpeg" alt="Bat Infographic" class="individual-image">
 
@@ -153,14 +150,14 @@
             </a>
 
             <a href="#"
-                onclick="openImagePopup('Images/GFMEGif.gif', 'Gluten Free Me App (GIF)', 'Description for Gluten Free Me App (GIF)')">
+                onclick="openImagePopup('Images/GFMEGif.gif', 'Gluten Free Me App', 'Description for Gluten Free Me App (GIF)')">
 
                 <img src="Images/GFMEGif.gif" alt="Gluten Free Me App (GIF)" class="individual-image">
 
             </a>
 
             <a href="#"
-                onclick="openImagePopup('Images/Squishmallow.jpeg', 'Squishmallow Map', 'Description for Squishmallow Map')">
+                onclick="openImagePopup('Images/Squishmallow.jpeg', 'Squishmallow Treasure Map', 'Discover the Squishmallow Treasure Map – an in-store poster for dedicated fans! Follow silver, gold, and bronze icons to find your Squishmallow favorites at nearby stores. Embark on a thrilling hunt in a world filled with huggable companions!')">
 
                 <img src="Images/Squishmallow.jpeg" alt="Squishmallow Map" class="individual-image">
 
@@ -192,18 +189,22 @@
 
         <div id="aboutTab" class="tab-content" style="display: none;">
             <section class="About">
+                <div class="about-content">
+                    <div class="about-info">
                 <h2>Hi I'm Bella!</h2>
                 <p>
                     I'm a recent graduate of San Francisco State University with a major in Visual Communication Design
                     and a minor in Marketing. Skilled in both print and digital mediums, I have a passion for
                     transforming concepts into colorful visuals. My background includes freelance work and active
-                    participation as a mentee and intern, where I am continuously refining my skills. I am eager to
+                    participation as a graphic design mentee and intern, where I am continuously refining my skills. I am eager to
                     contribute my creativity and skills in an entry-level position that allows me to collaborate and
-                    grow within a dynamic team. In my free time you can find me painting, playing tennis and trying new
-                    foods!
+                    grow within a dynamic team. In my free time you can find me teaching art classes, playing tennis or trying new foods! 
                 </p>
+            </div>
+            <div class="about-photo">
                 <img src="Images/graduate.jpg" alt="SFSU Graduate" class="individual-image">
-
+            </div>
+        </div>
             </section>
         </div>
 
@@ -219,9 +220,9 @@
 
         <div id="contactTab" class="tab-content" style="display: none;">
             <section class="Contact">
-                <div class="contact-info">
+                <div class="contact-content">
+                    <div class="contact-info">
                     <h2>Looking forward to hearing from you!</h2>
-                    <p>Let's connect or collaborate!</p>
 
                     <h3>Design/General Inquiries</h3>
                     <p><a href="mailto:leggerodesigns@gmail.com">leggerodesigns@gmail.com</a></p>
@@ -238,13 +239,12 @@
                 <div class="contact-photo">
                     <img src="Images/Contact.jpg" alt="Contact Me" class="individual-image">
                 </div>
+            </div>
             </section>
         </div>
 
 
     </main>
-
-
 
     <!-- Add the pop-up container within your main content -->
 
@@ -264,8 +264,6 @@
 
     </div>
 
-
-
     <footer>
 
         <p>Designed and coded by Bella Leggero and Ameen Safi | <a
@@ -276,7 +274,6 @@
     </footer>
 
     <script src="script.js"></script>
-
 
 </body>
 
