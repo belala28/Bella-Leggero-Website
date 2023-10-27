@@ -1,6 +1,7 @@
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    background-color: #f2ebe9;
 }
 
 body {
@@ -23,6 +24,7 @@ header {
     margin: 0 auto;
     font-family: 'mudstone-sans', sans-serif;
     font-size: 25px;
+    background-color: #f2ebe9;
 }
 
 header h1 {
@@ -30,6 +32,8 @@ header h1 {
     padding: 0;
     margin-left: -115px; /* Adjust the margin-left as needed */
     font-family: 'mudstone-sans', sans-serif; 
+    background-color: #f2ebe9;
+    color: #de5499
 }
 
 h2 {
@@ -38,11 +42,12 @@ h2 {
     text-align: center;
     font-family: 'mudstone-sans', sans-serif;
     font-size: 25px;
+    color:#264143
 }
 
 nav {
-    background-color: #ffffff;
-    color: #0000ff; /* Blue color */
+    background-color: #f2ebe9;
+    color: #de5499; /* Blue color */
     text-align: right;
     margin-right: -120px; /* Nav bar move */
     font-family: 'mudstone-sans', sans-serif;
@@ -50,7 +55,7 @@ nav {
 }
 
 nav a {
-    color: #0000ff; /* Blue color */
+    color: #de5499; /* Blue color */
     text-decoration: none;
     margin: 0 10px;
     font-family: 'mudstone-sans', sans-serif;
@@ -103,7 +108,7 @@ main {
   }
 
 footer {
-    background-color: #35a0a1;
+    background-color: #264143;
     text-align: center;
     padding: 10px;
     position: relative;
@@ -130,7 +135,6 @@ footer {
     /* Heading styles */
     .Contact h2 {
         font-size: 24px;
-        color: #333;
         text-align: center;
     }
 
@@ -138,15 +142,15 @@ footer {
     .Contact p {
         font-size: 16px;
         line-height: 1.5;
-        color: #666;
-        text-align: center;
+        text-align: left;
     }
 
     /* Contact details styles */
     .Contact h3 {
         font-size: 18px;
-        color: #333;
         margin-top: 20px;
+        text-align: left
+        font-family: 'mudstone-sans', sans-serif;
     }
 
     .Contact a {
@@ -166,7 +170,7 @@ footer {
 
     .Contact ul li a {
         display: inline-block;
-        background-color: #007bff;
+        background-color: #264143;
         color: #fff;
         padding: 5px 10px;
         border-radius: 3px;
@@ -175,22 +179,20 @@ footer {
     }
 
     .Contact ul li a:hover {
-        background-color: #0056b3;
+        background-color: #264143;
     }
 
     p {
         text-align: left;
     }
 
-
-
-
 </style>
+
 
 /* Default link styles */
 nav a {
     text-decoration: none;
-    color: #333; /* Default text color */
+    color: #007f88; /* Default text color */
     padding: 10px 20px;
     margin: 0 10px;
     border-radius: 5px;
@@ -200,13 +202,13 @@ nav a {
 
 /* Hover styles */
 nav a:hover {
-    color: #ff00e1; /* Text color on hover */
+    color: #e99f4c; /* Text color on hover */
     background-color: transparent; /* Remove background color on hover */
 }
 
 /* Footer */
 footer {
-    background-color: transparent;
+    background-color: #e99f4c;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -216,21 +218,24 @@ footer {
 footer p {
     font-size: 16px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Contact details styles */
 footer ul {
     list-style-type: none;
     padding: 0;
+    text-align: center;
 }
 
 footer ul li {
     margin-top: 10px;
+    text-align: center;
 }
 
 /* Change link color on hover */
 footer ul li a {
-    color: #fff;
+    color: #0000ff;
     text-decoration: none;
     margin: 0 15px;
     transition: color 0.3s; /* Smooth color transition on hover */
@@ -238,10 +243,10 @@ footer ul li a {
 
 /* Link hover styles */
 footer ul li a:hover {
-    color: #007bff; /* Color on hover */
+    color: #ff00e1; /* Color on hover */
 }
 
-/* CSS for the image popup */
+/* Image popup */
 .popup {
     display: none;
     position: fixed;
@@ -291,13 +296,13 @@ footer ul li a:hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #eddcd9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dropdown-content a {
-    color: #333;
+    color: #264143;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
