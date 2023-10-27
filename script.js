@@ -37,17 +37,43 @@ function getProjectDetails(projectName) {
 }
 
 // Function to open the image popup
-function openImagePopup(imageSrc) {
-    var popup = document.getElementById('imagePopup');
-    var popupImage = document.getElementById('popupImage');
-    popup.style.display = 'block';
-    popupImage.src = imageSrc;
-    document.body.style.overflow = 'hidden'; // Disable scrolling while popup is open
+// function openImagePopup(imageSrc, header, description) {
+//     // var popup = document.getElementById('imagePopup');
+//     // var popupImage = document.getElementById('popupImage');
+//     // popup.style.display = 'block';
+//     // popupImage.src = imageSrc;
+//     // document.body.style.overflow = 'hidden'; // Disable scrolling while popup is open
+//     document.getElementById("popup-header").innerText = header;
+
+//             document.getElementById("popup-description").innerText = description;
+
+//             document.getElementById("popup-image").src = imageSrc;
+
+//             document.getElementById("popup").style.display = "block";
+// }
+
+// // Function to close the image popup
+// function closeImagePopup() {
+//     var popup = document.getElementById('imagePopup');
+//     popup.style.display = 'none';
+//     document.body.style.overflow = 'auto'; // Enable scrolling again
+// }
+function openImagePopup(imageSrc, header, description) {
+
+    document.getElementById("popup-header").innerText = header;
+
+    document.getElementById("popup-description").innerText = description;
+
+    document.getElementById("popup-image").src = imageSrc;
+
+    document.getElementById("popup").style.display = "block";
+
 }
 
-// Function to close the image popup
-function closeImagePopup() {
-    var popup = document.getElementById('imagePopup');
-    popup.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling again
+
+
+function closePopup() {
+
+    document.getElementById("popup").style.display = "none";
+
 }

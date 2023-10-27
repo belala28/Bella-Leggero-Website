@@ -1,20 +1,94 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Bella Leggero Designs</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://use.typekit.net/axt5jhm.css">
-    
+
+
+
     <style>
         body {
+
             cursor: url('Images/testrainbowcopy.png'), auto;
+
+        }
+
+
+
+        /* Styles for the pop-up container */
+
+        .popup-container {
+
+            display: none;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background-color: rgba(0, 0, 0, 0.7);
+
+            text-align: center;
+
+        }
+
+
+
+        .popup-content {
+
+            background-color: #fff;
+
+            width: 80%;
+
+            max-width: 600px;
+
+            margin: 20px auto;
+
+            padding: 20px;
+
+            border-radius: 5px;
+
+            position: relative;
+
+        }
+
+
+
+        .close-button {
+
+            position: absolute;
+
+            top: 10px;
+
+            right: 10px;
+
+            cursor: pointer;
+
         }
     </style>
+
 </head>
+
 <body>
+
     <header>
+
+        <!-- Your header content -->
         <h1>Bella Leggero</h1>
         <nav>
             <style>
@@ -22,74 +96,116 @@
                     text-decoration: none;
                     appearance: none;
                 }
-            </style>  
+            </style>
             <a href="#" onclick="showTab('design')">Work</a>
             <div class="dropdown">
-                              
-         <a href="#" onclick="showTab('art')">Services <span>&#9662;</span></a>
-         <div class="dropdown-content">
-            <a href="#artClasses">Art Classes</a>
-            <a href="#design">Design</a>
+
+                <a href="#" onclick="showTab('art')">Services <span>&#9662;</span></a>
+                <div class="dropdown-content">
+                    <a href="#artClasses">Art Classes</a>
+                    <a href="#design">Design</a>
+                </div>
             </div>
-        </div>
-            
+
             <a href="#" onclick="showTab('about')">About</a>
             <a href="Files/BellaLeggero_Resume.pdf">Resume</a>
             <a href="#" onclick="showTab('contact')">Contact</a>
         </nav>
-    </header>
-    
-    <main>
-        <div id="designTab" class="tab-content">
-            <h2> Hello I'm Bella! (Website Under Construction) </h2>
-            <a href="#" onclick="openImagePopup('Images/Montreux.jpeg')">
-                <img src="Images/cactus.jpg" alt="Cactus Project" class="individual-image">
-            </a>    
 
-         <a href="#" onclick="openImagePopup('Images/Montreux.jpeg')">
-                    <img src="Images/Montreux.jpeg" alt="Montreux Project" class="individual-image">
-                </a>  
-                <a href="#" onclick="openImagePopup('Images/BatInfographic.jpeg')">
-                    <img src="Images/BatInfographic.jpeg" alt="Bat Infographic" class="individual-image">
-                </a>  
-                <a href="#" onclick="openImagePopup('Images/SFCV.jpg')">
-                    <img src="Images/SFCV.jpg" alt="SF City Vitals Logo" class="individual-image">
-                </a>
-                <a href="#" onclick="openImagePopup('Images/GFMEGif.gif')">
-                    <img src="Images/GFMEGif.gif" alt="Gluten Free Me App (GIF)" class="individual-image">
-                </a> 
-                <a href="#" onclick="openImagePopup('Images/Squishmallow.jpeg')">
-                    <img src="Images/Squishmallow.jpeg" alt="Squishmallow Map" class="individual-image">
-                </a> 
-                    <div id="projectDetails" class="hidden-section">
-                        <!-- Project details will be populated here -->
-                    </div>        
+    </header>
+
+
+
+    <main>
+
+        <div id="designTab" class="tab-content">
+
+            <h2> Hello I'm Bella! (Website Under Construction) </h2>
+
+            <a href="#"
+                onclick="openImagePopup('Images/Montreux.jpeg', 'Montreux Project', 'Description for Montreux Project')">
+
+                <img src="Images/cactus.jpg" alt="Cactus Project" class="individual-image">
+
+            </a>
+
+
+
+            <a href="#"
+                onclick="openImagePopup('Images/Montreux.jpeg', 'Montreux Project', 'Description for Montreux Project')">
+
+                <img src="Images/Montreux.jpeg" alt="Montreux Project" class="individual-image">
+
+            </a>
+
+            <a href="#"
+                onclick="openImagePopup('Images/BatInfographic.jpeg', 'Bat Infographic', 'Description for Bat Infographic')">
+
+                <img src="Images/BatInfographic.jpeg" alt="Bat Infographic" class="individual-image">
+
+            </a>
+
+            <a href="#"
+                onclick="openImagePopup('Images/SFCV.jpg', 'SF City Vitals Logo', 'Description for SF City Vitals Logo')">
+
+                <img src="Images/SFCV.jpg" alt="SF City Vitals Logo" class="individual-image">
+
+            </a>
+
+            <a href="#"
+                onclick="openImagePopup('Images/GFMEGif.gif', 'Gluten Free Me App (GIF)', 'Description for Gluten Free Me App (GIF)')">
+
+                <img src="Images/GFMEGif.gif" alt="Gluten Free Me App (GIF)" class="individual-image">
+
+            </a>
+
+            <a href="#"
+                onclick="openImagePopup('Images/Squishmallow.jpeg', 'Squishmallow Map', 'Description for Squishmallow Map')">
+
+                <img src="Images/Squishmallow.jpeg" alt="Squishmallow Map" class="individual-image">
+
+            </a>
+
+            <div id="projectDetails" class="hidden-section">
+
+                <!-- Project details will be populated here -->
+
+            </div>
         </div>
         <div id="artTab" class="tab-content" style="display: none;">
             <section class="Art">
                 <h2>Ms. Bella's Art Classes</h2>
                 <p>Check back soon for more details!</p>
-            
+
                 <h2>Design Services</h2>
-            <p>Check back soon for more details!</p>
+                <p>Check back soon for more details!</p>
             </section>
-        
-                </div>
-         <div id="aboutTab" class="tab-content" style="display: none;">
+
+        </div>
+        <div id="aboutTab" class="tab-content" style="display: none;">
             <section class="About">
-                    <h2>Hi I'm Bella!</h2>
-                    <p>
-                        I'm a recent graduate of San Francisco State University with a major in Visual Communication Design and a minor in Marketing. Skilled in both print and digital mediums, I have a passion for transforming concepts into colorful visuals. My background includes freelance work and active participation as a mentee and intern, where I am continuously refining my skills. I am eager to contribute my creativity and skills in an entry-level position that allows me to collaborate and grow within a dynamic team. In my free time you can find me painting, playing tennis and trying new foods! 
-                    </p> 
-                   <img src="Images/graduate.jpg" alt="SFSU Graduate" class="individual-image">
+                <h2>Hi I'm Bella!</h2>
+                <p>
+                    I'm a recent graduate of San Francisco State University with a major in Visual Communication Design
+                    and a minor in Marketing. Skilled in both print and digital mediums, I have a passion for
+                    transforming concepts into colorful visuals. My background includes freelance work and active
+                    participation as a mentee and intern, where I am continuously refining my skills. I am eager to
+                    contribute my creativity and skills in an entry-level position that allows me to collaborate and
+                    grow within a dynamic team. In my free time you can find me painting, playing tennis and trying new
+                    foods!
+                </p>
+                <img src="Images/graduate.jpg" alt="SFSU Graduate" class="individual-image">
 
             </section>
         </div>
 
         <div id="resumeTab" class="tab-content" style="display: none;">
             <section class="Resume">
-                    <h2>My Experience</h2>
-                    <p>My background includes freelance work for a local business and, a book design internship, and active participation as a mentee for Chronicle Books, where I am continuing to refine my skills. I am eager to contribute my creativity and skills in an entry-level position that allows me to collaborate and grow within a dynamic team.  </p> 
+                <h2>My Experience</h2>
+                <p>My background includes freelance work for a local business and, a book design internship, and active
+                    participation as a mentee for Chronicle Books, where I am continuing to refine my skills. I am eager
+                    to contribute my creativity and skills in an entry-level position that allows me to collaborate and
+                    grow within a dynamic team. </p>
             </section>
         </div>
 
@@ -98,39 +214,62 @@
                 <div class="contact-info">
                     <h2>Looking forward to hearing from you!</h2>
                     <p>Let's connect or collaborate!</p>
-                    
+
                     <h3>Design/General Inquiries</h3>
                     <p><a href="mailto:leggerodesigns@gmail.com">leggerodesigns@gmail.com</a></p>
-                    
+
                     <h3>Art Instruction Inquiries</h3>
                     <p><a href="mailto:msbellasartclass@gmail.com">msbellasartclass@gmail.com</a></p>
-                    
+
                     <h3>Socials</h3>
                     <ul>
                         <li><a href="https://www.linkedin.com/in/bellaleggero" target="_blank">LinkedIn</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="contact-photo">
                     <img src="Images/Contact.jpg" alt="Contact Me" class="individual-image">
                 </div>
             </section>
         </div>
-        
+
+
     </main>
 
-    <div id="imagePopup" class="popup">
+
+
+    <!-- Add the pop-up container within your main content -->
+
+    <div class="popup-container" id="popup">
+
         <div class="popup-content">
-            <img id="popupImage" src="" alt="Popup Image">
-            <span class="close-popup" onclick="closeImagePopup()">&times;</span>
+
+            <span class="close-button" onclick="closePopup()">&times;</span>
+
+            <h2 id="popup-header"></h2>
+
+            <p id="popup-description"></p>
+
+            <img id="popup-image" src="" alt="">
+
         </div>
+
     </div>
 
+
+
     <footer>
-        <p>Designed and coded by Bella Leggero and Ameen Safi | <a href="mailto:leggerodesigns@gmail.com">leggerodesigns@gmail.com</a> | <a href="https://www.linkedin.com/in/bellaleggero" title="This link will take you to Bella's Linkedin">Linkedin</a></p>
-  
+
+        <p>Designed and coded by Bella Leggero and Ameen Safi | <a
+                href="mailto:leggerodesigns@gmail.com">leggerodesigns@gmail.com</a> | <a
+                href="https://www.linkedin.com/in/bellaleggero"
+                title="This link will take you to Bella's Linkedin">Linkedin</a></p>
+
     </footer>
 
     <script src="script.js"></script>
+
+
 </body>
+
 </html>
