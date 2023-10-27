@@ -1,9 +1,10 @@
 // Function to show tab content
 function showTab(tab) {
-    const tabs = ["design", "art", "about", "contact"];
+    const tabs = ["design", "actualDesign", "art", "about", "contact"];
     
     tabs.forEach((t) => {
         const tabContent = document.getElementById(`${t}Tab`);
+        console.log(tabContent);
         if (t === tab) {
             tabContent.style.display = "block";
         } else {
