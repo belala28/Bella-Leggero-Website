@@ -78,3 +78,37 @@ function closePopup() {
     document.getElementById("popup").style.display = "none";
 
 }
+let currentImageIndex = 0;
+
+function showImage(index) {
+    const carouselItems = document.querySelector('.carousel-items');
+    const imageWidth = document.querySelector('.carousel-image').offsetWidth;
+    const translateX = -index * imageWidth;
+    carouselItems.style.transform = `translateX(${translateX}px)`;
+}
+
+function nextImage() {
+    if (currentImageIndex < document.querySelectorAll('.carousel-image').length - 1) {
+        currentImageIndex++;
+        showImage(currentImageIndex);
+    }
+}
+
+function previousImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+        showImage(currentImageIndex);
+    }
+}
+
+// Add event listeners for the "previous" and "next" buttons
+document.getElementById('previous-button').addEventListener('click', () => {
+    previousImage();
+});
+
+document.getElementById('next-button').addEventListener('click', () => {
+    nextImage();
+});
+
+// Ensure the initial image is displayed
+showImage(currentImageIndex);
