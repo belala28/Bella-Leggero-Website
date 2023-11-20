@@ -14,13 +14,13 @@ body {
 /* Align "Bella Leggero" with the navigation bar */
 header {
     display: flex;
-    align-items: center; /* Vertically align items in the header */
+    align-items: auto; /* Vertically align items in the header */
     justify-content: space-between; /* Add space between items */
     text-align: left; /* Reset text alignment */
-    padding: 0 50px; /* Adjust the padding as needed */
+    padding: 0%; /* Adjust the padding as needed */
     width: 100%;
     box-sizing: border-box;
-    max-width: 800px;
+    max-width: 90%;
     margin: 0 auto;
     font-family: 'mudstone-sans', sans-serif;
     font-size: 25px;
@@ -30,7 +30,7 @@ header {
 header h1 {
     margin: 0;
     padding: 0;
-    margin-left: -115px; /* Adjust the margin-left as needed */
+    margin-left: 0; /* Adjust the margin-left as needed */
     font-family: 'mudstone-sans', sans-serif; 
     background-color: #f2ebe9;
     color: #de5499
@@ -49,7 +49,7 @@ nav {
     background-color: #f2ebe9;
     color: #de5499; /* Blue color */
     text-align: right;
-    margin-right: -120px; /* Nav bar move */
+    margin-right: 0; /* Nav bar move */
     font-family: 'mudstone-sans', sans-serif;
     
 }
@@ -60,6 +60,24 @@ nav a {
     margin: 0 10px;
     font-family: 'mudstone-sans', sans-serif;
 }
+/* Media query for smaller screens */
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+}
+
+
 
 /* Add space between the navigation bar and the "Hi, I'm Bella!" section */
 #designTab h2 {
@@ -88,18 +106,6 @@ nav a {
     margin-right: 190px;
 }
  
-
-
-
-
-
-
-
-
-
-
-
-
 #aboutTab h2 {
     margin-top: 20px; /* Adjust the margin as needed */
 }
@@ -135,8 +141,9 @@ main {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /*Two columns*/
+    grid-template-rows: repeat(3, 1fr); /*Three rows*/
+    gap: 20px;
 }
 
 .artwork {
@@ -144,6 +151,8 @@ main {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    grid-column: span 1; /*Span 1 column*/
+    grid-row: span 1; /*Span 1 row*/
 }
 
 .artwork img {
@@ -152,7 +161,7 @@ main {
 }
 
 .individual-image {
-    width: 300px;
+    width: 25%;
     height: auto;
     border: 20px;
     border-radius: 5px; /* rounded corners */
